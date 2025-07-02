@@ -8,15 +8,19 @@
 </head>
 <body>
   <header>
-    <div class="logo">Quixadá <span>Aventura</span></div>
+    <div class="container">
+    <div class="logo">
+      <a href="home.html"><img src="/img/logo.avif" alt="Quixadá Aventura" /></a>
+    </div>
     <nav>
-      <a href="#">Início</a>
+      <a href="home.html">Início</a>
       <a href="#">Atividades em destaque</a>
       <a href="#">Sobre Nós</a>
       <a href="#">Loja</a>
       <a href="#">Blog</a>
     </nav>
     <div class="lang">PT-BR</div>
+    </div>
   </header>
 
   <section class="hero">
@@ -30,10 +34,10 @@
     <h2>Atividades em destaque</h2>
     <p>Explore quais são as atividades que mais se encaixam com você.</p>
     <div class="cards">
-      <div class="card"><img src="/Quixada_Aventura/img/atvdestaq1.png" alt="Tour para pilotos"><h3>Tour para pilotos</h3><p>Veja mais!</p></div>
-      <div class="card"><img src="/Quixada_Aventura/img/atvdestaq2.png" alt="Live tracking"><h3>Live tracking</h3><p>Veja mais!</p></div>
-      <div class="card"><img src="/Quixada_Aventura/img/atvdestaq3.png" alt="Cursos para voo"><h3>Cursos para voo</h3><p>Veja mais!</p></div>
-      <div class="card"><img src="/Quixada_Aventura/img/atvdestaq4.png" alt="Turismo em Quixadá"><h3>Turismo em Quixadá</h3><p>Veja mais!</p></div>
+      <a href="tourpilotos.html"><div class="card"><img src="/img/atvdestaq1.png" alt="Tour para pilotos"><h3>Tour para pilotos</h3></div></a>
+      <a href="livetracking.html"><div class="card"><img src="/img/atvdestaq2.png" alt="Live tracking"><h3>Live tracking</h3></div></a>
+      <a href="cursosvoo.html"><div class="card"><img src="/img/atvdestaq3.png" alt="Cursos para voo"><h3>Cursos para voo</h3></div></a>
+      <a href="turismoquixada.html"><div class="card"><img src="/img/atvdestaq4.png" alt="Turismo em Quixadá"><h3>Turismo em Quixadá</h3></div></a>
     </div>
   </section>
 
@@ -42,12 +46,21 @@
     <p class="sub">Conheça mais sobre o Quixadá Aventura e a cidade de Quixadá.</p>
 
     <h3>A cidade Quixadá</h3>
-    <div class="galeria">
-      <img src="/Quixada_Aventura/img/sobnos1.png" alt="Imagem 1">
-      <img src="/Quixada_Aventura/img/sobnos2.png" alt="Imagem 2">
-      <img src="/Quixada_Aventura/img/sobnos3.png" alt="Imagem 3">
-      <img src="/Quixada_Aventura/img/sobnos4.png" alt="Imagem 4">
+    <div class="galeria-custom">
+      <div class="img-esquerda">
+        <img src="/img/sobnos1.png" alt="Imagem 1">
+      </div>
+      <div class="img-direita">
+        <div class="img-cima">
+          <img src="/img/sobnos2.png" alt="Imagem 2">
+        </div>
+        <div class="img-baixo">
+          <img src="/img/sobnos3.png" alt="Imagem 3">
+          <img src="/img/sobnos4.png" alt="Imagem 4">
+        </div>
+      </div>
     </div>
+
 
     <div class="descricao">
       <p>É uma opção de turismo e aventura no Nordeste Brasileiro, seu principal atrativo está nos ares. A cidade é considerada o melhor local para a prática de Voo Livre no mundo, devido à grande quantidade de térmicas na região.</p>
@@ -56,7 +69,47 @@
       <p>A cidade também se destaca pelas diversas aparições de OVNIS, com alguns casos famosos internacionalmente.</p>
     </div>
 
-    <img src="/Quixada_Aventura/img/pedracrato.jpeg" class="imagem-destaque" alt="Pedra do Crato">
+    <img src="/img/pedcrato.png" class="imagem-destaque" alt="Pedra do Crato">
   </section>
+  <footer>
+  <div class="footer-container">
+    <div class="footer-left">
+      <h3>FALE CONOSCO PARA MAIS INFORMAÇÕES</h3>
+      <p>Quixadá Aventura</p>
+      <p>CNPJ 30.110.393/0001-57</p>
+      <p>Rua Chile 114 - Quixadá - CE</p>
+      <p>CEP: 63900-435</p>
+      <p>Atendimento conforme agendamento.</p>
+      <p>Funcionamento: DOM-DOM 09:00 às 19:00</p>
+      <div class="social-icons">
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="email" /></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="instagram" /></a>
+        <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png" alt="facebook" /></a>
+      </div>
+    </div>
+
+    <div class="footer-right">
+      <ul>
+        <li><a href="#">Voo Livre</a></li>
+        <li><a href="#">CrossCountry</a></li>
+        <li><a href="#">Quixadá</a></li>
+        <li><a href="#">Trilhas</a></li>
+        <li><a href="#">Aventura</a></li>
+        <li><a href="#">Parapentes</a></li>
+      </ul>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Cadastur_Logo.svg/2560px-Cadastur_Logo.svg.png" alt="Cadastur" class="cadastur-logo" />
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>
+      Desenvolvido por Alanna Regina, Isaac Barros, Rodrigo Pereira e Sabrina Rodrigues.<br />
+      E-mail para contato: sabrinasjrodrigues70@gmail.com |
+      rodrigodesign64@gmail.com |
+      isaacnarciels@gmail.com
+    </p>
+    <a href="#">Privacy policy</a>
+  </div>
+</footer>
 </body>
 </html>
