@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="home.css">
 </head>
 <body>
-  <header>
+  <header id="navbar">
     <div class="container">
     <div class="logo">
       <a href="home.html"><img src="/img/logo.avif" alt="Quixadá Aventura" /></a>
@@ -36,7 +36,7 @@
     <div class="cards">
       <a href="tourpilotos.html"><div class="card"><img src="/img/atvdestaq1.png" alt="Tour para pilotos"><h3>Tour para pilotos</h3></div></a>
       <a href="livetracking.html"><div class="card"><img src="/img/atvdestaq2.png" alt="Live tracking"><h3>Live tracking</h3></div></a>
-      <a href="cursosvoo.html"><div class="card"><img src="/img/atvdestaq3.png" alt="Cursos para voo"><h3>Cursos para voo</h3></div></a>
+      <a href="cursosparavoo.html"><div class="card"><img src="/img/atvdestaq3.png" alt="Cursos para voo"><h3>Cursos para voo</h3></div></a>
       <a href="turismoquixada.html"><div class="card"><img src="/img/atvdestaq4.png" alt="Turismo em Quixadá"><h3>Turismo em Quixadá</h3></div></a>
     </div>
   </section>
@@ -61,15 +61,20 @@
       </div>
     </div>
 
-
-    <div class="descricao">
-      <p>É uma opção de turismo e aventura no Nordeste Brasileiro, seu principal atrativo está nos ares. A cidade é considerada o melhor local para a prática de Voo Livre no mundo, devido à grande quantidade de térmicas na região.</p>
-      <p>Para outros aventureiros, as enormes pedras que envolvem a cidade proporcionam ótimas opções de rapel, escalada e trilhas.</p>
+    <div class="descricao-wrapper">
+      <div class="descricao">
+        <p>É uma opção de turismo e aventura no Nordeste Brasileiro, seu principal atrativo está nos ares. A cidade é considerada o melhor local para a prática de Voo Livre no mundo, devido à grande quantidade de térmicas na região.</p>
+        <p>Para outros aventureiros, as enormes pedras que envolvem a cidade proporcionam ótimas opções de rapel, escalada e trilhas.</p>
       <p>A palavra Quixadá em tupi-guarani quer dizer “pedra de ponta curvada” ou "cural de pedras". Fica situada na região central do Ceará e também é palco de diversas práticas esportivas radicais, que reúne praticantes de escalada, rapel, arvorismo, voo livre, motocross, mountain bike, corrida de orientação, off road, entre muitos outros.</p>
       <p>A cidade também se destaca pelas diversas aparições de OVNIS, com alguns casos famosos internacionalmente.</p>
     </div>
 
-    <img src="/img/pedcrato.png" class="imagem-destaque" alt="Pedra do Crato">
+      <div class="imagem-destaque-wrapper">
+        <img src="/img/pedcrato.png" class="imagem-destaque" alt="Pedra do Crato">
+      </div>
+    </div>
+
+
   </section>
   <footer>
   <div class="footer-container">
@@ -111,5 +116,11 @@
     <a href="#">Privacy policy</a>
   </div>
 </footer>
+<script>
+  window.addEventListener('scroll', function () {
+    const navbar = document.getElementById('navbar');
+    navbar.classList.toggle('scrolled', window.scrollY > 800);
+  });
+</script>
 </body>
 </html>

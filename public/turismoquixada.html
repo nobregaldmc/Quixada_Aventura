@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="turismoquixada.css">
 </head>
 <body>
-  <header>
+  <header id="navbar">
     <div class="container">
       <div class="logo">
         <a href="home.html"><img src="/img/logo.avif" alt="Quixadá Aventura" /></a>
@@ -29,7 +29,7 @@
     </div>
   </section>
   <section class="conteudo">
-    <img src="https://via.placeholder.com/400x400?text=Praia+e+Sertão" alt="Praia e Sertão" />
+    <img src="/img/turismo1.png" alt="Trilha da Galinha Choca" />
     <div class="texto">
       <h2>Trilha da Galinha Choca</h2>
       <p>
@@ -66,7 +66,7 @@
   </section>
 
   <section class="conteudo">
-    <img src="https://via.placeholder.com/400x400?text=Quixadá+Verde" alt="Quixadá Verde" />
+    <img src="/img/turismo2.png" alt="Pedra do Cruzeiro" />
     <div class="texto">
       <h2>Pedra do Cruzeiro</h2>
       <p>
@@ -103,7 +103,7 @@
   </section>
 
   <section class="conteudo">
-    <img src="https://via.placeholder.com/400x400?text=XC+Sertão+2025" alt="XC Sertão 2025" />
+    <img src="/img/turismo3.png" alt="Trilha da Barriguda" />
     <div class="texto">
       <h2>Trilha da Barriguda</h2>
       <p>
@@ -179,5 +179,11 @@
     <a href="#">Privacy policy</a>
   </div>
 </footer>
+<script>
+  window.addEventListener('scroll', function () {
+    const navbar = document.getElementById('navbar');
+    navbar.classList.toggle('scrolled', window.scrollY > 800);
+  });
+</script>
 </body>
 </html>

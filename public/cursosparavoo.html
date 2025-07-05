@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cursos Para Voo - Quixadá Aventura</title>
-    <link rel="stylesheet" href="cursovoo.css">
+    <link rel="stylesheet" href="cursosparavoo.css">
 </head>
 <body>
-  <header>
+  <header id="navbar">
     <div class="container">
       <div class="logo">
         <a href="home.html"><img src="/img/logo.avif" alt="Quixadá Aventura" /></a>
@@ -25,33 +25,33 @@
 
    <section class="hero">
     <div class="hero-content">
-      <h1>Cursos Para Voo</h1>
+      <h1>Cursos</h1>
     </div>
   </section>
   <section class="conteudo">
-    <img src="https://via.placeholder.com/400x400?text=Praia+e+Sertão" alt="Praia e Sertão" />
+    <img src="/img/cursosparavoo1.png" alt="Cursos para Iniciantes no Voo Livre" />
     <div class="texto">
-      <h2>Cursos para iniciantes no Voo Livre</h2>
+      <h2>Curso para iniciantes no Voo Livre</h2>
       <p>
         Voe pela primeira vez! Com apenas 10 dias consecutivos ou 10 dias alternados de aula. Um curso prático, dinâmico e feito sob medida para você iniciar sua jornada no voo livre com segurança e confiança. Está pronto para decolar? 
       </p>
-      <a href="#" class="botao">Saiba mais</a>
+      <a href="/public/cursoiniciantes.html" class="botao">Saiba mais</a>
     </div>
   </section>
 
   <section class="conteudo">
-    <img src="https://via.placeholder.com/400x400?text=Quixadá+Verde" alt="Quixadá Verde" />
+    <img src="/img/cursosparavoo2.png" alt="Curso de voo em Térmicas" />
     <div class="texto">
       <h2>Curso de Voo em Térmicas</h2>
       <p>
         Para aqueles que desejam realizar voos mais altos, duradouros e seguros aproveitando as correntes térmicas.
       </p>
-      <a href="#" class="botao">Saiba mais</a>
+      <a href="/public/cursovootermicas.html" class="botao">Saiba mais</a>
     </div>
   </section>
 
   <section class="conteudo">
-    <img src="https://via.placeholder.com/400x400?text=XC+Sertão+2025" alt="XC Sertão 2025" />
+    <img src="/img/cursosparavoo3.png" alt="Cursos para Voo de Longas Distancias" />
     <div class="texto">
       <h2>Cursos para Voos de longas distâncias</h2>
       <p>
@@ -62,7 +62,7 @@
   </section>
 
   <section class="conteudo">
-    <img src="https://via.placeholder.com/400x400?text=Quixadá+Verde" alt="Quixadá Verde" />
+    <img src="/img/cursosparavoo4.png" alt="Curso de Operação em Voo Rebocado" />
     <div class="texto">
       <h2>Curso de Operação em Voo Rebocado</h2>
       <p>
@@ -72,7 +72,7 @@
   </section>
 
     <section class="conteudo">
-    <img src="https://via.placeholder.com/400x400?text=XC+Sertão+2025" alt="XC Sertão 2025" />
+    <img src="/img/cursosparavoo5.png" alt="Cursos para Resgate de Voo Livre" />
     <div class="texto">
       <h2>Cursos para resgate de Voo Livre</h2>
       <p>
@@ -121,5 +121,11 @@
     <a href="#">Privacy policy</a>
   </div>
 </footer>
+<script>
+  window.addEventListener('scroll', function () {
+    const navbar = document.getElementById('navbar');
+    navbar.classList.toggle('scrolled', window.scrollY > 800);
+  });
+</script>
 </body>
 </html>

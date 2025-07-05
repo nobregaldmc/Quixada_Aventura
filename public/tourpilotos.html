@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="tourpilotos.css">
 </head>
 <body>
-  <header>
+  <header id="navbar">
     <div class="container">
       <div class="logo">
         <a href="home.html"><img src="/img/logo.avif" alt="Quixadá Aventura" /></a>
@@ -28,8 +28,9 @@
       <h1>Tour Para Pilotos</h1>
     </div>
   </section>
+  <div class="grade" >
   <section class="conteudo">
-    <img src="https://via.placeholder.com/400x400?text=Praia+e+Sertão" alt="Praia e Sertão" />
+    <img src="/img/tourppilotos1.png" alt="Praia e Sertão" />
     <div class="texto">
       <h2>Praia e Sertão</h2>
       <span>(24/03 a 31/03)</span>
@@ -41,8 +42,8 @@
     </div>
   </section>
 
-  <section class="conteudo">
-    <img src="https://via.placeholder.com/400x400?text=Quixadá+Verde" alt="Quixadá Verde" />
+  <section class="conteudo invertido">
+    <img src="/img/tourppilotos2.png" alt="Quixadá Verde" />
     <div class="texto">
       <h2>Quixadá Verde</h2>
       <span>(21/06 a 30/06)</span>
@@ -55,7 +56,7 @@
   </section>
 
   <section class="conteudo">
-    <img src="https://via.placeholder.com/400x400?text=XC+Sertão+2025" alt="XC Sertão 2025" />
+    <img src="/img/tourppilotos3.png" alt="XC Sertão 2025" />
     <div class="texto">
       <h2>XC Sertão 2025</h2>
       <span>(21/06 a 30/06)</span>
@@ -68,6 +69,7 @@
       <a href="#" class="botao">Entre em Contato</a>
     </div>
   </section>
+  </div>
   
   <footer>
   <div class="footer-container">
@@ -109,5 +111,11 @@
     <a href="#">Privacy policy</a>
   </div>
 </footer>
+<script>
+  window.addEventListener('scroll', function () {
+    const navbar = document.getElementById('navbar');
+    navbar.classList.toggle('scrolled', window.scrollY > 800);
+  });
+</script>
 </body>
 </html>
