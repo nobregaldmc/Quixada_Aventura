@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página do Eurismar</title>
+  <link rel="stylesheet" href="/public/stylesheets/adminpage.css" />
+</head>
+<body>
+  <div class="container">
+    <h1 class="titulo">Página do<br><span>Administrador</span></h1>
+
+    <div class="acoes">
+      <button class="botao-acao">
+        <span class="icone">➕</span>
+        Adicionar imagem
+      </button>
+      <button class="botao-acao">
+        <span class="icone">➕</span>
+        Certificado
+      </button>
+    </div>
+
+    <form class="formulario">
+      <label for="titulo">Título da notícia:</label>
+      <input type="text" id="titulo" name="titulo" />
+
+      <label for="descricao">Descrição:</label>
+      <textarea id="descricao" name="descricao"></textarea>
+
+      <button type="submit" class="btn-publicar">Publicar</button>
+    </form>
+  </div>
+</body>
+</html>

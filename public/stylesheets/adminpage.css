@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('/public/images/adminpage.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.container {
+  background-color: #fff;
+  padding: 40px;
+  width: 400px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.titulo {
+  color: #2e7d32;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.titulo span {
+  font-weight: bold;
+  font-size: 20px;
+  display: block;
+  border-bottom: 2px solid #2e7d32;
+  width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 3px;
+}
+
+.acoes {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 30px;
+  gap: 10px;
+}
+
+.botao-acao {
+  background: none;
+  border: none;
+  color: #2e7d32;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.icone {
+  font-size: 16px;
+}
+
+.formulario {
+  text-align: left;
+}
+
+.formulario label {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #2e7d32;
+  font-size: 14px;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.formulario textarea {
+  resize: vertical;
+  height: 60px;
+}
+
+.btn-publicar {
+  display: block;
+  margin: 20px auto 0;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+}
