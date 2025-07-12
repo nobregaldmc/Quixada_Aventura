@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Quixadá Aventura</title>
-  <link rel="stylesheet" href="/stylesheets/home.css">
+  <link rel="stylesheet" href="/public/stylesheets/home.css">
 </head>
 <body>
   <header id="navbar">
     <div class="container">
     <div class="logo">
-      <a href="/"><img src="/images/logo.avif" alt="Quixadá Aventura" /></a>
+      <a href="/views/home.html"><img src="/public/images/logo.avif" alt="Quixadá Aventura" /></a>
     </div>
     <nav>
-      <a href="/">Início</a>
-      <a href="#">Atividades em destaque</a>
-      <a href="#">Sobre Nós</a>
-      <a href="#">Loja</a>
-      <a href="#">Blog</a>
+      <a href="/views/home.html">Início</a>
+      <a href="#destaq">Atividades em destaque</a>
+      <a href="#sobre">Sobre Nós</a>
+      <a href="#loja">Loja</a>
+      <a href="#blog">Blog</a>
     </nav>
     <div class="lang">PT-BR</div>
     </div>
@@ -26,37 +26,37 @@
   <section class="hero">
     <div class="hero-content">
       <h1>Aventure-se pelo sertão e<br>viva uma experiência única!</h1>
-      <a href="#" class="btn">Descubra a aventura perfeita para você</a>
+      <a href="#destaq" class="btn">Descubra a aventura perfeita para você</a>
     </div>
   </section>
 
-  <section class="destaques">
+  <section id="destaq" class="destaques">
     <h2>Atividades em destaque</h2>
     <p>Explore quais são as atividades que mais se encaixam com você.</p>
     <div class="cards">
-      <a href="/tourpilotos"><div class="card"><img src="/images/atvdestaq1.png" alt="Tour para pilotos"><h3>Tour para pilotos</h3></div></a>
-      <a href="/livetracking"><div class="card"><img src="/images/atvdestaq2.png" alt="Live tracking"><h3>Live tracking</h3></div></a>
-      <a href="/cursosparavoo"><div class="card"><img src="/images/atvdestaq3.png" alt="Cursos para voo"><h3>Cursos para voo</h3></div></a>
-      <a href="/turismoquixada"><div class="card"><img src="/images/atvdestaq4.png" alt="Turismo em Quixadá"><h3>Turismo em Quixadá</h3></div></a>
+      <a href="/views/tourpilotos.html"><div class="card"><img src="/public/images/atvdestaq1.png" alt="Tour para pilotos"><h3>Tour para pilotos</h3></div></a>
+      <a href="/views/livetracking.html"><div class="card"><img src="/public/images/atvdestaq2.png" alt="Live tracking"><h3>Live tracking</h3></div></a>
+      <a href="/views/cursosparavoo.html"><div class="card"><img src="/public/images/atvdestaq3.png" alt="Cursos para voo"><h3>Cursos para voo</h3></div></a>
+      <a href="/views/turismoquixada.html"><div class="card"><img src="/public/images/atvdestaq4.png" alt="Turismo em Quixadá"><h3>Turismo em Quixadá</h3></div></a>
     </div>
   </section>
 
-  <section class="sobre">
+  <section id="sobre" class="sobre">
     <h2>Sobre Nós</h2>
     <p class="sub">Conheça mais sobre o Quixadá Aventura e a cidade de Quixadá.</p>
 
     <h3>A cidade Quixadá</h3>
     <div class="galeria-custom">
       <div class="img-esquerda">
-        <img src="/images/sobnos1.png" alt="Imagem 1">
+        <img src="/public/images/sobnos1.png" alt="Imagem 1">
       </div>
       <div class="img-direita">
         <div class="img-cima">
-          <img src="/images/sobnos2.png" alt="Imagem 2">
+          <img src="/public/images/sobnos2.png" alt="Imagem 2">
         </div>
         <div class="img-baixo">
-          <img src="/images/sobnos3.png" alt="Imagem 3">
-          <img src="/images/sobnos4.png" alt="Imagem 4">
+          <img src="/public/images/sobnos3.png" alt="Imagem 3">
+          <img src="/public/images/sobnos4.png" alt="Imagem 4">
         </div>
       </div>
     </div>
@@ -70,10 +70,236 @@
     </div>
 
       <div class="imagem-destaque-wrapper">
-        <img src="/images/pedcrato.png" class="imagem-destaque" alt="Pedra do Crato">
+        <img src="/public/images/pedcrato.png" class="imagem-destaque" alt="Pedra do Crato">
       </div>
     </div>
 
+  <section class="visao-missao-valores">
+  <h2>Quixadá Aventura</h2>
+  <div class="cartao">
+    <div class="cart">
+      <img src="https://cdn-icons-png.flaticon.com/512/159/159604.png" alt="Ícone Visão" />
+      <h3>Visão</h3>
+      <p>Ser referência mundial na assistência e prática do voo livre no nordeste brasileiro.</p>
+    </div>
+    <div class="cart">
+      <img src="https://cdn-icons-png.flaticon.com/512/2204/2204346.png" alt="Ícone Missão" />
+      <h3>Missão</h3>
+      <p>Contribuir para o desenvolvimento do voo livre no Brasil, tornando Quixadá o principal destino para pilotos de todos os níveis com segurança, sustentabilidade econômica, social e ambiental.</p>
+    </div>
+    <div class="cart">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Ícone Valores" />
+      <h3>Valores</h3>
+      <p>Segurança, inovação, ética, satisfação do cliente e amor ao esporte.</p>
+    </div>
+  </div>
+  </section>
+
+  <section class="pilotos">
+  <h2>Pilotos que já trabalharam conosco</h2>
+  <div class="grid-pilotos">
+    <div class="piloto">
+      <img src="/public/images/pilotos1.png" alt="Josef Eisinger" />
+      <p><strong>Josef Edlinger:</strong><br />World record holder in wing B low</p>
+    </div>
+    <div class="piloto">
+      <img src="/public/images/pilotos2.png" alt="Alexander Robé" />
+      <p><strong>Alexander Robé:</strong><br />World record XC 2015</p>
+    </div>
+    <div class="piloto">
+      <img src="/public/images/piloto3.png" alt="Koen Vancauwenberghe" />
+      <p><strong>Koen Vancampenhoudt:</strong><br />Advanced pilot, flights greater than 300km</p>
+    </div>
+    <div class="piloto">
+      <img src="/public/images/piloto4.png" alt="Yves Chenevoy & Kevin" />
+      <p><strong>Veso Ovcharov and Kevin Philip:</strong><br />They are among the bests in the world in acrobatic flight. In Quixadá they both flew the 400km race and Kevin managed to win the 2016xc</p>
+    </div>
+    <div class="piloto">
+      <img src="/public/images/piloto5.png" alt="Adan and Felipe" />
+      <p><strong>Adan and Friends:</strong><br />Poland team that broke the national record flying in Quixadá</p>
+    </div>
+    <div class="piloto">
+      <img src="/public/images/piloto6.png" alt="Florentin Campana" />
+      <p><strong>Florentin Coppey and friends:</strong><br />Everyone has overcome their distances</p>
+    </div>
+    <div class="piloto">
+      <img src="/public/images/piloto7.png" alt="Vitor Chichorro" />
+      <p><strong>Veso Ovcharov:</strong><br />Previously presented Clovis: Flight instructor in Minas Gerais</p>
+    </div>
+    <div class="piloto">
+      <img src="/public/images/piloto8.png" alt="Old members of flight school" />
+      <p><strong>Odilon Jr and flight student:</strong><br />CBVL dual flight instructor</p>
+    </div>
+    <div class="piloto">
+      <img src="/public/images/piloto9.png" alt="Robert Häfeli" />
+      <p><strong>Robert Haider:</strong><br />Test pilot of a large European company</p>
+    </div>
+    <div class="piloto">
+      <img src="/public/images/piloto10.png" alt="Luis Flor" />
+      <p><strong>Luk Fly</strong><br />Previously presented Marina: Brazilian pilot intermediary Josias: Brazilian pilot intermediary</p>
+    </div>
+    <div class="piloto">
+      <img src="/public/images/piloto11.png" alt="Chico Protásio" />
+      <p><strong>Ondrej Prochazka:</strong><br />This is among the best in the world in acrobatic flight. Flying across has exceeded 300km</p>
+    </div>
+    <div class="piloto">
+      <img src="/public/images/piloto12.png" alt="Equipe de Instrução" />
+      <p><strong>Carlos Bonifacio:</strong><br />Advanced pilot, flights greater than 300km</p>
+    </div>
+    <div class="piloto">
+      <img src="/public/images/piloto13.png" alt="Equipe de competidores" />
+      <p><strong>Florentin:</strong><br />Pilot of EN-B that surpassed its record in Quixadá Falko Felix: Double flight world record</p>
+    </div>
+    <div class="piloto">
+      <img src="/public/images/piloto14.png" alt="Equipe Fundadora" />
+      <p><strong>Silvio Zugarine:</strong><br />(5th from left to right) Experienced pilot with flights over 300km</p>
+    </div>
+    <div class="piloto">
+      <img src="/public/images/piloto15.png" alt="Equipe atual" />
+      <p><strong>Alexandre:</strong><br />Founder of the Ceará Cross Country League Pergentino Junior: Advanced xc native pilot.</p>
+    </div>
+  </div>
+  </section>
+
+
+<section class="eurismar">
+  <div class="eurismar-container">
+    <div class="fotos">
+      <div class="fotinha img-1" style="background-image: url('/public/images/eurifoto1.png');"></div>
+      <div class="fotinha img-2" style="background-image: url('/public/images/eurifoto2.png');"></div>
+      <div class="fotinha img-3" style="background-image: url('/public/images/eurifoto3.png');"></div>
+    </div>
+    <div class="texto-eurismar">
+      <h2>Eurismar Júnior</h2>
+      <p><strong>Founder Quixadá Aventura</strong></p>
+      <p>
+        Piloto nativo de Quixadá, atualmente possui o nível 4 monitor/instrutor da Confederação Brasileira de Voo Livre em paraglider e é aluno de asa delta. É o piloto com mais registros de voo na marca de Quixadá nos últimos 3 anos e está entre os 3 melhores pilotos de cross country do estado do Ceará. Possui o recorde Cearense da categoria EN C com um voo de 317km.
+      </p>
+      <p>
+        Eurismar é graduado em Administração de empresas e viu a necessidade de capacitar a educação do voo livre de sua cidade. Por isso, por muitos anos, dá início à formação de diversos pilotos locais, dedicando-se a ensinar não apenas a técnica, mas também valores como disciplina, humildade, respeito e segurança. 
+      </p>
+      <p>
+        Criador da Quixadá Aventura em 2015, é também o idealizador e principal responsável pelos grandes eventos e tours do sertão.
+      </p>
+      <p>
+        Quixadá Aventura hoje é um dos grandes apoiadores do esporte na cidade de Quixadá, com atuação em diversos eventos nacionais. Com sua equipe de instrutores, já atendeu e preparou mais de 100 pilotos do mundo inteiro e hoje já atingiu mais de 300 mil acessos em sua página no Google.
+      </p>
+      <p>
+        No início de 2018 participou da Rota das Emoções do Norte com o voo rebocado, para fins de exploração e análise de área para turismo de voo livre com mais segurança, infraestrutura e clima adequado.
+      </p>
+
+      <h3>Credenciais e Afiliações:</h3>
+      <ul>
+        <li>Habilitado e registrado pela CBVL e NAC</li>
+        <li>Cadastro na Agência Nacional de Aviação Civil</li>
+        <li>Certificado da Confederação Brasileira de Voo Livre (CBVL) - Nível 4 – Instrutor e certificador de novos pilotos</li>
+      </ul>
+
+      <h3>Experiência e Realizações:</h3>
+      <ul>
+        <li>Participações em Campeonatos Brasileiros de Parapente (2018 – 2021)</li>
+        <li>Participações em etapas do campeonato Brasileiro de Asa Delta</li>
+        <li>Instrutor de pilotos da Argentina, Espanha, Suíça, com apoio de Frank Brown em 2019</li>
+        <li>Instrutor do SAR (Grupo de Busca e Salvamento do Aeroclube)</li>
+      </ul>
+
+      <h3>Recordes e Conquistas:</h3>
+      <ul>
+        <li>Recorde do Ceará de distância: 325 km</li>
+        <li>Segundo maior piloto do Nordeste em voos de 300 km</li>
+        <li>Recorde da categoria EN C com distância de 317,0 km</li>
+        <li>Voo recorde de mais de 7h50 minutos</li>
+      </ul>
+
+      <h3>Projetos Recentes:</h3>
+      <ul>
+        <li>Guiando e organizando Tours CrossCountry nos estados do Ceará, Paraíba, Rio Grande do Norte</li>
+        <li>Atuou com diversos atletas do Brasil e na Europa</li>
+        <li>Auxilia novos atletas na trilha da nacionalidade e vem atuando em quebra de recordes no Sertão</li>
+      </ul>
+    </div>
+  </div>
+</section>
+    
+  </section>
+
+  <section id="loja" class="loja">
+  <h2>Loja</h2>
+  <p>Veja os produtos da nossa loja!</p>
+
+  <div class="produtos">
+    <div class="produto">
+      <img src="/public/images/loja1.png" alt="Luvas para voo livre">
+      <h3>Luvas para voo livre</h3>
+      <p class="preco">R$ XX,XX</p>
+    </div>
+
+    <div class="produto">
+      <img src="/public/images/loja2.png" alt="Suporte articulado para Go PRO">
+      <h3>Suporte articulado para Go PRO</h3>
+      <p class="preco">R$ XX,XX</p>
+    </div>
+
+    <div class="produto">
+      <img src="/public/images/loja3.png" alt="Reboque Hidráulico/Elétrico para voo livre">
+      <h3>Reboque Hidráulico/Elétrico para voo livre</h3>
+      <p class="preco">R$ XX,XX</p>
+    </div>
+
+    <div class="produto">
+      <img src="/public/images/loja4.png" alt="Guia de pouso seguro no horário térmico">
+      <h3>Guia de Pouso Seguro no Horário Térmico</h3>
+      <p class="preco">R$ XX,XX</p>
+    </div>
+  </div>
+</section>
+
+<section id="blog" class="blog-destaques">
+  <h2 class="blog-titulo">Blog</h2>
+  <p class="blog-subtitulo">Jornal do Voo Livre Notícias, sobre voo livre, recortadas de Jornais de todo o Mundo! <br /> Exclusivo para Pilotos!</p>
+
+  <div class="blog-destaques-container">
+    <div class="coluna-esquerda">
+      <div class="card pequeno" style="background-image: url('/public/images/blog1.png');">
+        <div class="card-texto">
+          <span class="tag">Em destaque</span>
+          <h3>Serena Ronchi fez 6.575,31km em 3 meses no Sertão</h3>
+        </div>
+      </div>
+      <div class="card pequeno" style="background-image: url('/public/images/blog2.png');">
+        <div class="card-texto">
+          <span class="tag">Em destaque</span>
+          <h3>Não consigo andar, mas posso voar!!!</h3>
+        </div>
+      </div>
+      <div class="card pequeno" style="background-image: url('/public/images/blog3.png');">
+        <div class="card-texto">
+          <span class="tag">Em destaque</span>
+          <h3>Timo Leonetti quebra recorde de 562km na África do Sul</h3>
+        </div>
+      </div>
+      <div class="card pequeno" style="background-image: url('/public/images/blog4.png');">
+        <div class="card-texto">
+          <span class="tag">Em destaque</span>
+          <h3>Veja os resultados da última competição em Quixadá</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="coluna-direita">
+      <div class="card grande" style="background-image: url('/public/images/blog5.png');">
+        <div class="card-texto">
+          <span class="tag">Em destaque</span>
+          <h3>5 dicas para evitar todos os colapsos no seu voo de parapente.</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="botao-central">
+    <a href="/views/blog.html"><button class="btn-verde">Ler mais</button></a>
+  </div>
+</section>
 
   </section>
   <footer>
@@ -95,23 +321,25 @@
 
     <div class="footer-right">
       <ul>
-        <li><a href="#">Voo Livre</a></li>
-        <li><a href="#">CrossCountry</a></li>
-        <li><a href="#">Quixadá</a></li>
-        <li><a href="#">Trilhas</a></li>
-        <li><a href="#">Aventura</a></li>
-        <li><a href="#">Parapentes</a></li>
+        <li>Voo Livre</li>
+        <li>CrossCountry</li>
+        <li>Quixadá</li>
+        <li>Trilhas</li>
+        <li>Aventura</li>
+        <li>Parapentes</li>
       </ul>
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Cadastur_Logo.svg/2560px-Cadastur_Logo.svg.png" alt="Cadastur" class="cadastur-logo" />
+      <img src="/public/images/cadastur.png" alt="Cadastur" class="cadastur-logo" />
     </div>
   </div>
 
   <div class="footer-bottom">
     <p>
-      Desenvolvido por Alanna Regina, Isaac Barros, Rodrigo Pereira e Sabrina Rodrigues.<br />
+      Prototipado por por Alanna Regina, Isaac Barros, Rodrigo Pereira e Sabrina Rodrigues.<br />
+      Desenvolvido por Lucas Nobrega e Sabrina Rodrigues.<br />
       E-mail para contato: sabrinasjrodrigues70@gmail.com |
       rodrigodesign64@gmail.com |
-      isaacnarciels@gmail.com
+      isaacnarciels@gmail.com |
+      lucasnobrega656@gmail.com
     </p>
     <a href="#">Privacy policy</a>
   </div>
