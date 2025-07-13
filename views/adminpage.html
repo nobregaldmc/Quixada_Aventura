@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Página do Eurismar</title>
-  <link rel="stylesheet" href="/public/stylesheets/adminpage.css" />
+  <link rel="stylesheet" href="/stylesheets/adminpage.css" />
 </head>
+
 <body>
   <div class="container">
     <h1 class="titulo">Página do<br><span>Administrador</span></h1>
 
     <div class="acoes">
-      <button class="botao-acao">
+      <button id="botao-adicionar-imagem" class="botao-acao" type="button">
         <span class="icone">➕</span>
         Adicionar imagem
       </button>
-      <button class="botao-acao">
+      <button class="botao-acao" type="button">
         <span class="icone">➕</span>
         Certificado
       </button>
     </div>
 
-    <form class="formulario">
+    <form class="formulario" action="/admin/blog/publicar" method="POST" enctype="multipart/form-data">
       <label for="titulo">Título da notícia:</label>
-      <input type="text" id="titulo" name="titulo" />
+      <input type="text" id="titulo" name="titulo" required />
 
       <label for="descricao">Descrição:</label>
-      <textarea id="descricao" name="descricao"></textarea>
+      <textarea id="descricao" name="descricao" required></textarea>
+
+      <input type="file" id="input-imagem" name="imagemPost" accept="image/*" style="display: none;" />
+      
+      <p>Arquivo selecionado: <span id="nome-arquivo">Nenhum</span></p>
 
       <button type="submit" class="btn-publicar">Publicar</button>
     </form>
   </div>
-</body>
+    <script src="/javascripts/enviar-imagem.js"></script>
+  </body>
 </html>

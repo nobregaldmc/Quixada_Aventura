@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog</title>
-  <link rel="stylesheet" href="/public/stylesheets/blog.css">
+  <link rel="stylesheet" href="/stylesheets/blog.css">
+  <script></script>
 </head>
+
 <body>
   <header id="navbar">
     <div class="container">
-    <div class="logo">
-      <a href="/views/home.html"><img src="/public/images/logo.avif" alt="Quixadá Aventura" /></a>
-    </div>
-    <nav>
-      <a href="/views/home.html">Início</a>
-         <a href="/views/home.html#destaq">Atividades em destaque</a>
-        <a href="/views/home.html#sobre">Sobre Nós</a>
-        <a href="/views/home.html#loja">Loja</a>
-        <a href="/views/home.html#blog">Blog</a>
-    </nav>
-    <div class="lang">PT-BR</div>
+      <div class="logo">
+        <a href="/"><img src="/images/logo.avif" alt="Quixadá Aventura" /></a>
+      </div>
+      <nav>
+        <a href="/">Início</a>
+        <a href="/#destaq">Atividades em destaque</a>
+        <a href="/#sobre">Sobre Nós</a>
+        <a href="/#loja">Loja</a>
+        <a href="/#blog">Blog</a>
+      </nav>
+      <div class="lang">PT-BR</div>
     </div>
   </header>
 
@@ -29,49 +32,16 @@
     </div>
   </section>
 
-  <main class="blog-container">
-    <article class="blog-post">
-      <h2>Timo Leonetti, quebrou hoje o recorde de XC da África do Sul com um voo de 562km.</h2>
-      <p>Corpo de Timo Leonetti já é bem conhecido dos que frequentam o Sertão Brasileiro. Na última temporada conseguiu diversos voos acima de 400km e ...</p>
-      <p class="data">9 de jul. de 2025 - 11h da manhã</p>
-      <img src="/public/images/blog1.png" alt="Mapa do voo de Timo" class="post-img"/>
-      <p>Timo Leonetti já é bem conhecido dos que frequentam o Sertão Brasileiro. Na última temporada conseguiu diversos voos acima de 400km e sempre esteve entre os melhores durante a temporada do Sertão. Hoje não foi diferente: voando com a EN-C, ele alcançou a impressionante marca de 562,7km, batendo o recorde da África do Sul. O que impressiona é a constância: Timo tem mais de 30 voos acima de 300km no currículo. Segundo os pilotos presentes, ele voava com precisão e calma, aproveitando cada térmica com sabedoria. “O céu parecia feito pra ele hoje”, comentou um colega. “Foi incrível ver como ele lidou com os desafios do dia.” O voo começou por volta das 9h30 e durou mais de 8 horas. Clement Latour também estava presente e realizou um voo de 533km, mostrando que as condições estavam realmente excepcionais. Com o sucesso da jornada, Timo agora se consolida como uma das maiores referências do voo de distância mundial. O recorde anterior da África do Sul era de 540km e pertencia a Sebastian Katrinov, na África do Sul em 2021.</p>
-      <img src="/public/images/blog2.png" alt="Pilotos juntos" class="post-img"/>
-      <p>Na foto da esquerda para direita: Stéphane Leonetti (pai do Timo), Eurimar Jr e Timo Leonetti. Timo Leonetti voa no sertão brasileiro com frequência e já é um destaque da cena livre. Hoje, ele voou 562km. Nas temporadas que Timo Leonetti passou no Konacel, Stéphane ficou em segundo lugar por quase toda a pontuação da competição, podendo perder algumas posições nas fases finais.</p>
-    </article>
+  <main class="blog-container" data-posts='<%- JSON.stringify(posts || []) %>'>
 
-    <section class="veja-tambem">
-      <h3>Veja também</h3>
+  <div id="display-post-principal"></div>
 
-      <div class="sugestao">
-        <img src="/public/images/blog3.png" alt="Imagem 1">
-        <div>
-          <h4>Não consigo andar, mas posso voar!!!</h4>
-          <p>Decenas de cadeirantes ganharam asas e voaram pelo céu de João Pessoa na Paraíba.</p>
-          <small>ler artigo</small>
-        </div>
-      </div>
+  <section class="veja-tambem">
+    <h3>Veja também</h3>
+    <div id="container-sugestoes"></div>
+  </section>
 
-      <div class="sugestao">
-        <img src="/public/images/blog4.png" alt="Imagem 2">
-        <div>
-          <h4><span style="color: #1db954;">Serena Ronchi fez 6.575,31km de EN-B</span> em 3 months of the dry season of the Sertão Brazil in 2020</h4>
-          <p>She was by far the pilot who flew the longest and most distance in the Sertão that season. With 2 years of flying and EN-B glider she accumulated over 300km. Check the best questions she heard about her experience in the Sertão.</p>
-          <small>ler artigo</small>
-        </div>
-      </div>
-
-      <div class="sugestao">
-        <img src="/public/images/blog5.png" alt="Imagem 3">
-        <div>
-          <h4 style="color:#1db954;">5 dicas para evitar todos os colapsos no seu voo de parapente.</h4>
-          <p>Os colapsos em voo de parapente são totalmente evitáveis, mas é preciso mais que um bom controle do equipamento para escapar deles.</p>
-          <small>Em destaque</small>
-        </div>
-      </div>
-
-    </section>
-  </main>
+</main>
 
   <footer>
     <div class="footer-container">
@@ -99,27 +69,30 @@
           <li>Aventura</li>
           <li>Parapentes</li>
         </ul>
-        <img src="/public/images/cadastur.png" alt="Cadastur" class="cadastur-logo" />
+        <img src="/images/cadastur.png" alt="Cadastur" class="cadastur-logo" />
       </div>
     </div>
 
     <div class="footer-bottom">
-          <p>
-      Prototipado por por Alanna Regina, Isaac Barros, Rodrigo Pereira e Sabrina Rodrigues.<br />
-      Desenvolvido por Lucas Nobrega e Sabrina Rodrigues.<br />
-      E-mail para contato: sabrinasjrodrigues70@gmail.com |
-      rodrigodesign64@gmail.com |
-      isaacnarciels@gmail.com |
-      lucasnobrega656@gmail.com
-    </p>
+      <p>
+        Prototipado por por Alanna Regina, Isaac Barros, Rodrigo Pereira e Sabrina Rodrigues.<br />
+        Desenvolvido por Lucas Nobrega e Sabrina Rodrigues.<br />
+        E-mail para contato: sabrinasjrodrigues70@gmail.com |
+        rodrigodesign64@gmail.com |
+        isaacnarciels@gmail.com |
+        lucasnobrega656@gmail.com
+      </p>
       <a href="#">Privacy policy</a>
     </div>
   </footer>
-<script>
-  window.addEventListener('scroll', function () {
-    const navbar = document.getElementById('navbar');
-    navbar.classList.toggle('scrolled', window.scrollY > 800);
-  });
-</script>
+
+  <script src="/javascripts/blog.js"></script>
+  <script>
+    window.addEventListener('scroll', function () {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('scrolled', window.scrollY > 800);
+    });
+  </script>
 </body>
+
 </html>

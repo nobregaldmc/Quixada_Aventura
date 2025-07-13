@@ -69,7 +69,7 @@ header.scrolled .lang {
 }
 
 .hero {
-  background: url('/public/images/banner1.png') center/cover no-repeat;
+  background: url('/images/banner1.png') center/cover no-repeat;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -226,4 +226,8 @@ footer {
   color: white;
   text-decoration: underline;
   margin-left: 10px;
+}
+
+.sugestao-ativa {
+  display: none;
 }

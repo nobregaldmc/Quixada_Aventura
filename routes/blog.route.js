@@ -8,14 +8,12 @@ router.get('/', (req, res) => {
     const postsFilePath = path.join(__dirname, '..', 'data', 'posts.json');
     const postsFileContent = fs.readFileSync(postsFilePath, 'utf8');
     const todosOsPosts = JSON.parse(postsFileContent);
-
-    const postsRecentes = todosOsPosts.slice(0, 5);
-
-    res.render('home', { postsRecentes: postsRecentes });
+    
+    res.render('blog', { posts: todosOsPosts });
 
   } catch (error) {
-    console.error("Erro ao carregar posts para a home:", error);
-    res.render('home', { postsRecentes: [] }); 
+    console.error("Erro ao carregar os posts:", error);
+    res.status(500).send("Erro ao carregar a página do blog.");
   }
 });
 
