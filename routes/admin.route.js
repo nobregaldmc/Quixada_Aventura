@@ -50,5 +50,4 @@ router.post('/blog/publicar', upload.single('imagemPost'), (req, res) => {
   }
 });
 
-
 module.exports = router;

@@ -296,51 +296,19 @@
     </div>
   </section>
 
-  <section id="blog" class="blog-destaques">
-    <h2 class="blog-titulo">Blog</h2>
-    <p class="blog-subtitulo">Jornal do Voo Livre Notícias, sobre voo livre, recortadas de Jornais de todo o Mundo!
-      <br /> Exclusivo para Pilotos!</p>
+<section id="blog" class="blog-destaques">
+  <h2 class="blog-titulo">Blog</h2>
+  <p class="blog-subtitulo">Jornal do Voo Livre Notícias, sobre voo livre, recortadas de Jornais de todo o Mundo!
+    <br /> Exclusivo para Pilotos!
+  </p>
 
-    <% if (postsRecentes && postsRecentes.length> 0) { %>
+  <div class="blog-destaques-container" id="container-blog-destaques">
+    </div>
 
-      <div class="blog-destaques-container">
-
-        <div class="coluna-esquerda">
-          <% postsRecentes.slice(1, 5).forEach(post=> { %>
-            <div class="card pequeno"
-              style="background-image: url('<%= post.imagemUrl || '/images/placeholder.png' %>');">
-              <div class="card-texto">
-                <span class="tag">Em destaque</span>
-                <h3>
-                  <%= post.titulo %>
-                </h3>
-              </div>
-            </div>
-            <% }); %>
-        </div>
-
-        <div class="coluna-direita">
-          <div class="card grande"
-            style="background-image: url('<%= postsRecentes[0].imagemUrl || '/images/placeholder.png' %>');">
-            <div class="card-texto">
-              <span class="tag">Em destaque</span>
-              <h3>
-                <%= postsRecentes[0].titulo %>
-              </h3>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <% } else { %>
-        <p>Nenhuma notícia em destaque no momento.</p>
-        <% } %>
-
-          <div class="botao-central">
-            <a href="/blog"><button class="btn-verde">Ler mais</button></a>
-          </div>
-  </section>
+  <div class="botao-central">
+    <a href="/blog"><button class="btn-verde">Ler mais</button></a>
+  </div>
+</section>
 
   </section>
   <footer>
@@ -385,6 +353,7 @@
       <a href="#">Privacy policy</a>
     </div>
   </footer>
+  <script src="/javascripts/home.js"></script>
   <script>
     window.addEventListener('scroll', function () {
       const navbar = document.getElementById('navbar');

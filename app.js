@@ -10,6 +10,7 @@ const turismoQuixadaRoute = require('./routes/turismoquixada.route.js');
 const liveTrackingRoute = require('./routes/livetracking.route.js');
 const blogRoute = require('./routes/blog.route.js');
 const adminRoute = require('./routes/admin.route.js');
+const apiRouter = require('./routes/api.route.js');
 
 const app = express();
 
@@ -28,6 +29,7 @@ app.use('/cursosparavoo', cursosParaVooRoute);
 app.use('/turismoquixada', turismoQuixadaRoute);
 app.use('/livetracking', liveTrackingRoute);
 app.use('/blog', blogRoute);
+app.use('/api', apiRouter);
 
 app.use('/admin', basicAuth({
     users: { 'admin': 'admin' }, 
