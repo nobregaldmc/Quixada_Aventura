@@ -1,37 +1,57 @@
 document.addEventListener('DOMContentLoaded', () => {
-  async function carregarPostsParaAdmin() {
-    const container = document.getElementById('lista-posts-admin');
-    if (!container) return;
 
-    try {
-      const response = await fetch('/api/posts');
-      const posts = await response.json();
+  const botaoAdicionar = document.getElementById("botao-adicionar-imagem");
+  const inputImagem = document.getElementById("input-imagem");
+  const nomeArquivoSpan = document.getElementById("nome-arquivo");
 
-      if (posts.length === 0) {
-        container.innerHTML = '<p>Nenhum post para gerenciar.</p>';
-        return;
+  if (botaoAdicionar && inputImagem && nomeArquivoSpan) {
+    botaoAdicionar.addEventListener("click", () => {
+      inputImagem.click();
+    });
+
+    inputImagem.addEventListener("change", () => {
+      if (inputImagem.files.length > 0) {
+        nomeArquivoSpan.textContent = inputImagem.files[0].name;
+      } else {
+        nomeArquivoSpan.textContent = "Nenhum";
       }
-
-      let html = '';
-      posts.forEach(post => {
-        html += `
-          <div class="post-item">
-            <span class="post-titulo">${post.titulo}</span>
-            <div class="post-acoes">
-              <a href="/admin/blog/editar/${post.id}" class="btn-editar">Editar</a>
-              <form action="/admin/blog/apagar/${post.id}" method="POST" onsubmit="return confirm('Tem certeza que deseja apagar este post?');">
-                <button type="submit" class="btn-apagar">Apagar</button>
-              </form>
-            </div>
-          </div>
-        `;
-      });
-      container.innerHTML = html;
-
-    } catch (error) {
-      console.error('Erro ao carregar posts no admin:', error);
-      container.innerHTML = '<p>Erro ao carregar os posts.</p>';
-    }
+    });
   }
-  carregarPostsParaAdmin();
+
+  const formPublicar = document.querySelector('.formulario');
+
+  if (formPublicar) {
+    formPublicar.addEventListener('submit', async (event) => {
+      event.preventDefault(); 
+      
+      const submitButton = formPublicar.querySelector('button[type="submit"]');
+      submitButton.disabled = true;
+      submitButton.textContent = 'Publicando...';
+      
+      const formData = new FormData(formPublicar);
+
+      try {
+        const response = await fetch('/api/posts', {
+          method: 'POST',
+          body: formData
+        });
+
+        if (!response.ok) {
+          throw new Error('Falha ao publicar o post.');
+        }
+
+        formPublicar.reset(); 
+        document.getElementById('nome-arquivo').textContent = 'Nenhum';
+        
+        console.log('Post publicado com sucesso!'); 
+
+      } catch (error) {
+        console.error('Erro no formulário de publicação:', error);
+        alert('Não foi possível publicar o post.'); 
+      } finally {
+        submitButton.disabled = false;
+        submitButton.textContent = 'Publicar';
+      }
+    });
+  }
 });
