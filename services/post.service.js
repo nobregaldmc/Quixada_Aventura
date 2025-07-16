@@ -25,8 +25,47 @@ function createPost(novoPost) {
   }
 }
 
-// Exportamos as funções para que as rotas possam usá-las
+function deletePost(postId) {
+  try {
+    const posts = getAllPosts();
+    const postsAtualizados = posts.filter(p => p.id !== postId);
+    
+    fs.writeFileSync(postsFilePath, JSON.stringify(postsAtualizados, null, 2));
+    return true; 
+  } catch (error) {
+    console.error("Erro ao apagar o post:", error);
+    return false; 
+  }
+}
+
+function getPostById(postId) {
+  const posts = getAllPosts();
+  return posts.find(p => p.id === postId);
+}
+
+function updatePost(postId, dadosAtualizados) {
+  try {
+    const posts = getAllPosts();
+    const postIndex = posts.findIndex(p => p.id === postId);
+
+    if (postIndex === -1) {
+      return null; 
+    }
+
+    posts[postIndex] = { ...posts[postIndex], ...dadosAtualizados };
+    
+    fs.writeFileSync(postsFilePath, JSON.stringify(posts, null, 2));
+    return posts[postIndex]; 
+  } catch (error) {
+    console.error("Erro ao atualizar o post:", error);
+    return null;
+  }
+}
+
 module.exports = {
   getAllPosts,
-  createPost
+  createPost,
+  deletePost,
+  getPostById,
+  updatePost 
 };
