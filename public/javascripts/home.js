@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let htmlColunaEsquerda = '';
             postsPequenos.forEach(post => {
                 htmlColunaEsquerda += `
-                    <div class="card pequeno" style="background-image: url('${post.imagemUrl || '/images/placeholder.png'}');">
+                    <div class="card pequeno" style="background-image: url('${post.imagemUrl}');">
                         <div class="card-texto">
                             <span class="tag">Em destaque</span>
                             <h3>${post.titulo}</h3>
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             const htmlColunaDireita = `
-                <div class="card grande" style="background-image: url('${postGrande.imagemUrl || '/images/placeholder.png'}');">
+                <div class="card grande" style="background-image: url('${postGrande.imagemUrl}');">
                     <div class="card-texto">
                         <span class="tag">Em destaque</span>
                         <h3>${postGrande.titulo}</h3>
